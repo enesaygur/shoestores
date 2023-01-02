@@ -1,0 +1,30 @@
+.App {
+  background-image: linear-gradient(to right, white, darkgrey);
+  width: 100%;
+  height: 100%;
+}
+.navbar-text {
+  display: table-cell;
+  height: 5rem;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  font-weight: bold;
+}
+.menu {
+  background-color: #dfdae5;
+  height: 5rem;
+  border-radius: 90px;
+  margin: 0.5rem;
+  padding: 0rem 1rem;
+}
+.navbar-icon{
+  display: table-cell;
+}
+.navbar-menu{
+  display: table-cell;
+  vertical-align:middle;
+  text-align: center;
+  width: 100vw;
+}
