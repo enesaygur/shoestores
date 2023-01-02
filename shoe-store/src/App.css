@@ -2,29 +2,203 @@
   background-image: linear-gradient(to right, white, darkgrey);
   width: 100%;
   height: 100%;
+  font-family: "Merienda One";
 }
 .navbar-text {
-  display: table-cell;
-  height: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   font-size: 30px;
   text-align: center;
   vertical-align: middle;
   width: 100vw;
-  font-weight: bold;
+  font-weight: 700;
+  text-shadow: 2px 4px 8px #fff;
+  font-variant: small-caps;
 }
 .menu {
   background-color: #dfdae5;
-  height: 5rem;
   border-radius: 90px;
   margin: 0.5rem;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
+  box-shadow: 1px 5px 4px grey;
+  border: none;
 }
-.navbar-icon{
+.navbar-icon {
   display: table-cell;
 }
-.navbar-menu{
+.navbar-menu {
   display: table-cell;
-  vertical-align:middle;
+  vertical-align: middle;
   text-align: center;
   width: 100vw;
+}
+
+.ui.menu.item {
+  background: transparent !important;
+  border: none;
+  color: black;
+  font-variant: small-caps;
+  font-size: 25px;
+  font-family: "Merienda One";
+}
+
+.home-banner {
+  padding: 1rem;
+  height: 100vh;
+  background-image: url("https://nike-shoe-store.netlify.app/static/media/nike2.25e4ef16.jpg");
+  background-position: 50%;
+  background-size: "cover";
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(14 12 12 / 53%);
+  margin: 0rem 1rem;
+}
+.home-tagline {
+  margin: 5rem 0rem;
+  font-family: "Acme";
+  font-size: 70px;
+  text-shadow: 2px 4px 2px #e7d8e1;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+}
+.home-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: "karla";
+  color: rgba(12, 11, 11, 0.99);
+  margin: 0 auto;
+}
+.home-end {
+  margin: 0rem 25rem;
+  margin-top: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+.home-lines {
+  display: flex;
+  justify-content: center;
+}
+.line {
+  width: 30%;
+}
+.home-span {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #fff;
+  font-family: "Merienda One";
+  text-align: center;
+}
+.home-products-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  font-family: "Merienda One";
+  margin: 0rem 5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+
+}
+.home-products {
+  margin: 10px;
+  text-decoration: none;
+  border: 1px solid hsla(0, 0%, 50.2%, 0.24);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px grey;
+  font-size: 100%;
+  width: 270px;
+  background: #fff;
+  height: 250px;
+}
+.ui,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+.home-shoe-name {
+  color: #5d0137;
+}
+.home-shoe-price {
+  color: #606e60;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+.footer-icons a {
+  margin: 0rem 0.5rem;
+}
+.footer-copyright {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1f1414;
+  padding: 0.5rem;
+  font-family: "PT Sans Narrow";
+}
+
+.about-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://nike-shoe-store.netlify.app/static/media/nike1.d481dafd.jpg");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 98%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px grey;
+  margin: 0rem 1rem;
+}
+.about-shoe {
+  background-color: red;
+  height: 10rem;
+  text-align: center;
+  width: 35rem;
+}
+.about-shoe h2 {
+  font-size: 25px;
+  text-shadow: 4px 4px 1px #1e80d4;
+  width: 100%;
+  font-family: "Rowdies";
+  font-weight: bold;
+  color: #000;
+}
+.about-shoe p {
+  margin: 20px;
+  width: 100%;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #1b4d7c;
+  font-family: "Rowdies";
+  font-weight: bold;
+}
+.about-tagline {
+  font-family: "Rowdies", cursive;
+  margin: 20px;
+  margin-top: 5rem;
+  font-size: 40px;
+  text-shadow: 4px 2px 1px #000;
+  color: #5fa5ff;
+  font-feature-settings: "c2sc";
+  font-variant: small-caps;
+  text-align: center;
+}
+.about-content {
+  margin: 3rem 5rem;
+  line-height: 2rem;
+  justify-content: center;
+  text-align: justify;
+  font-family: "Rowdies", cursive;
+  padding: 0;
+  text-shadow: 1px 1px 1px grey;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
 }

@@ -6,11 +6,12 @@ import About from "../pages/About";
 import Navbar from "./Navbar";
 import Products from "../pages/Products.js";
 import Cart from "../pages/Cart.js";
+import Footer from "./Footer.js";
 
 export default function Dashboard() {
   return (
     <div>
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <Navbar />
         </Grid>
@@ -23,7 +24,7 @@ export default function Dashboard() {
           </Routes>
         </Grid>
         <Grid item xs={12}>
-          Footer
+          <Footer/>
         </Grid>
       </Grid>
     </div>
