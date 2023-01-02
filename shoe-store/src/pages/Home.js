@@ -51,7 +51,7 @@ export default function Home() {
           <h3 className="home-shoe-price">$65</h3>
         </div>
         <div className="home-products">
-          <img
+          <img alt=""
             src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
             style={{
               width: "200px",

@@ -8,10 +8,14 @@ import "@fontsource/merienda-one";
 import "@fontsource/acme";
 import "@fontsource/karla";
 import "@fontsource/pt-sans-narrow";
+import { Provider } from "react-redux";
+import store from "./stores/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );

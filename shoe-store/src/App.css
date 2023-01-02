@@ -99,7 +99,6 @@
   margin: 0rem 5rem;
   margin-top: 2rem;
   margin-bottom: 5rem;
-
 }
 .home-products {
   margin: 10px;
@@ -111,6 +110,12 @@
   width: 270px;
   background: #fff;
   height: 250px;
+}
+
+.home-products:hover {
+  transition-duration: .4s;
+  transition-property: transform;
+  transform: scale(1.06);
 }
 .ui,
 h1,
@@ -156,9 +161,10 @@ h6 {
   border-radius: 20px;
   box-shadow: 10px 10px 10px grey;
   margin: 0rem 1rem;
+  display: inline-table;
+  padding-top: 15%;
 }
 .about-shoe {
-  background-color: red;
   height: 10rem;
   text-align: center;
   width: 35rem;
@@ -183,10 +189,11 @@ h6 {
   font-family: "Rowdies", cursive;
   margin: 20px;
   margin-top: 5rem;
-  font-size: 40px;
+  font-size: 38px;
+  font-family: "Rowdies", cursive;
   text-shadow: 4px 2px 1px #000;
   color: #5fa5ff;
-  font-feature-settings: "c2sc";
+  font-feature-settings: "smcp";
   font-variant: small-caps;
   text-align: center;
 }

@@ -1,6 +1,10 @@
 import React from "react";
-
+import { HiShoppingCart } from "react-icons/hi";
+import { useDispatch, useSelector } from "react-redux";
+import { setProduct } from "../stores/slices/products";
 export default function Products() {
+  const {product} =useSelector(state => state.products)
+  const dispatch=useDispatch();
   return (
     <div>
       <div className="home-products-container">
@@ -16,6 +20,7 @@ export default function Products() {
             Flex Experience Run 9
           </h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35} />
         </div>
         <div className="home-products">
           <img
@@ -27,6 +32,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35} />
         </div>
         <div className="home-products">
           <img
@@ -38,6 +44,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35}/>
         </div>
         <div className="home-products">
           <img
@@ -49,6 +56,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35}/>
         </div>
         <div className="home-products">
           <img
@@ -60,6 +68,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35}/>
         </div>
         <div className="home-products">
           <img
@@ -71,6 +80,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35}/>
         </div>
         <div className="home-products">
           <img
@@ -82,6 +92,7 @@ export default function Products() {
           ></img>
           <h3 className="home-shoe-name">Flex Experience Run 9</h3>
           <h3 className="home-shoe-price">$65</h3>
+          <HiShoppingCart size={35}/>
         </div>
       </div>
     </div>
