@@ -9,7 +9,7 @@ import "@fontsource/acme";
 import "@fontsource/karla";
 import "@fontsource/pt-sans-narrow";
 import { Provider } from "react-redux";
-import store from "./stores/store";
+import {store} from "./stores/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

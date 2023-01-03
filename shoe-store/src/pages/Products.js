@@ -1,99 +1,30 @@
 import React from "react";
 import { HiShoppingCart } from "react-icons/hi";
+import product from "./products.json";
 import { useDispatch, useSelector } from "react-redux";
-import { setProduct } from "../stores/slices/products";
+//import { setProducts } from "../stores/slices/products"; eğer veri apiden gelseydi kullanılacaktı
 export default function Products() {
-  const {product} =useSelector(state => state.products)
-  const dispatch=useDispatch();
+  // const { products } = useSelector((state) => state.products); apiden gelseydi kullanılacaktı
+  const dispatch = useDispatch();
+
+  product.sort((a, b) => (a.id > b.id ? -1 : +1)); //liste id sine göre sıra tersine çevrildi.
   return (
     <div>
       <div className="home-products-container">
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name" s>
-            Flex Experience Run 9
-          </h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35} />
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35} />
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35}/>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35}/>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35}/>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35}/>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-          <HiShoppingCart size={35}/>
-        </div>
+        {product.map((item) => (
+          <div className="home-products" key={item.id}>
+            <img
+              src={item.src}
+              style={{
+                width: "200px",
+                height: "150px",
+              }}
+            ></img>
+            <h3 className="home-shoe-name">{item.title}</h3>
+            <h3 className="home-shoe-price">${item.price}</h3>
+            <HiShoppingCart size={35} />
+          </div>
+        ))}
       </div>
     </div>
   );

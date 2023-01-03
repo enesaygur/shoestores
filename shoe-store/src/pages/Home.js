@@ -1,6 +1,7 @@
 import React from "react";
-
+import product from "./products.json";
 export default function Home() {
+  product.sort((a, b) => (a.id > b.id ? -1 : +1));
   return (
     <div>
       <div className="home-banner"></div>
@@ -17,50 +18,19 @@ export default function Home() {
         </div>
       </div>
       <div className="home-products-container">
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name"s>Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-        </div>
-        <div className="home-products">
-          <img
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-        </div>
-        <div className="home-products">
-          <img alt=""
-            src="https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg"
-            style={{
-              width: "200px",
-              height: "150px",
-            }}
-          ></img>
-          <h3 className="home-shoe-name">Flex Experience Run 9</h3>
-          <h3 className="home-shoe-price">$65</h3>
-        </div>
+        {product.slice(0, 4).map((item) => (
+          <div className="home-products" key={item.id}>
+            <img
+              src={item.src}
+              style={{
+                width: "200px",
+                height: "150px",
+              }}
+            ></img>
+            <h3 className="home-shoe-name">Flex Experience Run 9</h3>
+            <h3 className="home-shoe-price">${item.price}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );
