@@ -1,7 +1,7 @@
 import React from "react";
 import { HiShoppingCart } from "react-icons/hi";
 import product from "../products.json";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addBasket } from "../stores/slices/basket";
 //import { setProducts } from "../stores/slices/products"; eğer veri apiden gelseydi kullanılacaktı
 export default function Products() {
@@ -22,7 +22,10 @@ export default function Products() {
             ></img>
             <h3 className="home-shoe-name">{item.title}</h3>
             <h3 className="home-shoe-price">${item.price}</h3>
-            <HiShoppingCart size={35} onClick={()=>dispatch(addBasket(item))}/>
+            <HiShoppingCart className="icon-hover"
+              size={35}
+              onClick={() => dispatch(addBasket(item))}
+            />
           </div>
         ))}
       </div>

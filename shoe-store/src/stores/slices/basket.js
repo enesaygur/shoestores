@@ -19,8 +19,22 @@ export const basketSlice = createSlice({
         state.basket.push(tempProduct);
       }
     },
+    removeBasket: (state, action) => {
+      //state.basket = state.basket.filter(
+      // (item) => item.id !== action.payload.id );
+      const itemIndex = state.basket.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (state.basket[itemIndex].quantity > 1) {
+        state.basket[itemIndex].quantity -= 1;
+      } else {
+        state.basket = state.basket.filter(
+          (item) => item.id !== action.payload.id
+        );
+      }
+    },
   },
 });
 
-export const { addBasket } = basketSlice.actions;
+export const { addBasket, removeBasket } = basketSlice.actions;
 export default basketSlice.reducer;

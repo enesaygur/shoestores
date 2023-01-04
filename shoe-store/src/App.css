@@ -113,9 +113,9 @@
 }
 
 .home-products:hover {
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   transition-property: transform;
-  transform: scale(1.06);
+  transform: scale(1.03);
 }
 .ui,
 h1,
@@ -208,4 +208,11 @@ h6 {
   justify-content: center;
   font-size: 25px;
   font-weight: bold;
+}
+.icon-hover:hover {
+  color:darkslategrey;
+}
+.icon-hover:active {
+  color: green;
+  transform: scale(0.8);
 }

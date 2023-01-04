@@ -1,12 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addBasket, removeBasket } from "../stores/slices/basket";
 
 export default function Cart() {
+  const dispatch = useDispatch();
   const { basket } = useSelector((item) => item.basket);
-  console.log(basket);
   return (
     <div style={{ textAlign: "center" }}>
-      <label>Sepet Ürün Sayısı: {basket.length}</label><br/>
+      <label>Sepet Ürün Sayısı: {basket.length}</label>
+      <br />
       <div className="home-products-container">
         {basket.map((item) => (
           <div className="home-products" key={item.id}>
@@ -19,10 +21,11 @@ export default function Cart() {
             ></img>
             <h3 className="home-shoe-name">{item.title}</h3>
             <h3 className="home-shoe-price">${item.price}</h3>
-            <label>
-              {item.quantity} x {item.price} = ${item.quantity*item.price}
-            </label>
+            <button onClick={() => dispatch(removeBasket(item))}> - </button>
+            {item.quantity}
+            <button onClick={() => dispatch(addBasket(item))}> + </button>
             <br />
+            <label>${item.quantity * item.price}</label>
           </div>
         ))}
       </div>
