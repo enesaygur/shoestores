@@ -22,7 +22,6 @@ export default function Products() {
             ></img>
             <h3 className="home-shoe-name">{item.title}</h3>
             <h3 className="home-shoe-price">${item.price}</h3>
-            <label>{item.quantity}</label>
             <HiShoppingCart size={35} onClick={()=>dispatch(addBasket(item))}/>
           </div>
         ))}
