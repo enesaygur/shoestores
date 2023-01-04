@@ -5,11 +5,10 @@ import { addBasket, removeBasket } from "../stores/slices/basket";
 export default function Cart() {
   const dispatch = useDispatch();
   const { basket } = useSelector((item) => item.basket);
+
   return (
-    <div style={{ textAlign: "center" }}>
-      <label>Sepet Ürün Sayısı: {basket.length}</label>
-      <br />
-      <div className="home-products-container">
+    <div style={{ textAlign: "center", display: "flex" }}>
+      <div className="home-products-container" style={{ width: "60%" }}>
         {basket.map((item) => (
           <div className="home-products" key={item.id}>
             <img
@@ -29,6 +28,14 @@ export default function Cart() {
           </div>
         ))}
       </div>
+      <div
+        style={{
+          width: "35%",
+          float: "left",
+          padding: "1rem",
+          fontSize: "22px",
+        }}
+      ></div>
     </div>
   );
 }
