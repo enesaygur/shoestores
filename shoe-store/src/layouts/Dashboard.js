@@ -17,7 +17,7 @@ export default function Dashboard() {
         </Grid>
         <Grid item xs={12}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/*" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />

@@ -1,5 +1,5 @@
 import React from "react";
-import product from "./products.json";
+import product from "../products.json";
 export default function Home() {
   product.sort((a, b) => (a.id > b.id ? -1 : +1));
   return (
