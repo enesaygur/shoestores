@@ -5,7 +5,12 @@ import { addBasket, removeBasket } from "../stores/slices/basket";
 export default function Cart() {
   const dispatch = useDispatch();
   const { basket } = useSelector((item) => item.basket);
-
+  let basketLength = basket.length;
+  let sumBasket = basket.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  let sumQuantity = basket.reduce((acc, item) => acc + item.quantity, 0);
   return (
     <div style={{ textAlign: "center", display: "flex" }}>
       <div className="home-products-container" style={{ width: "60%" }}>
@@ -35,7 +40,17 @@ export default function Cart() {
           padding: "1rem",
           fontSize: "22px",
         }}
-      ></div>
+      >
+        {sumBasket ? "Toplam Fiyat:" + sumBasket : ""}
+        <br />
+        <br />
+        {sumQuantity ? "Toplam Ürün:" + sumQuantity : ""}
+        <br />
+        <br />
+        {basketLength?"Farklı Ürün Adedi:"+ basketLength:""}
+        <br />
+      </div>
+
     </div>
   );
 }
