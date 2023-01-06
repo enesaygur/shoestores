@@ -39,8 +39,12 @@ export const basketSlice = createSlice({
         localStorage.setItem("basket", JSON.stringify(state.basket));
       }
     },
+    clearCart:(state,action)=>{
+      state.basket = [];
+      localStorage.setItem("basket", JSON.stringify(state.basket));
+    },
   },
 });
 
-export const { addBasket, removeBasket } = basketSlice.actions;
+export const { addBasket, removeBasket,clearCart } = basketSlice.actions;
 export default basketSlice.reducer;
